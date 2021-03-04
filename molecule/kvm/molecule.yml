@@ -13,6 +13,7 @@ lint: |
 platforms:
   - name: fedora
     box: fedora/33-cloud-base
+    box_version: 33.20201019.0
     memory: 1024
     cpus: 2
     config_options:

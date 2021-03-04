@@ -56,7 +56,6 @@
     group: "{{ minio_group }}"
     mode: '0755'
   loop:
-    - /agora/s3
     - /etc/minio
     - ${HOME}/.minio/certs
 
@@ -91,14 +90,14 @@
   systemd:
     daemon_reexec: yes
 
-- name: Allowing firewall rules for ports
-  firewalld:
-    port: "{{ item }}"
-    permanent: yes
-    state: enabled
-  notify: Restart firewalld
-  loop:
-    - "{{ minio_server_port }}/tcp"
+# - name: Allowing firewall rules for ports
+#   firewalld:
+#     port: "{{ item }}"
+#     permanent: yes
+#     state: enabled
+#   notify: Restart firewalld
+#   loop:
+#     - "{{ minio_server_port }}/tcp"
 
 # - name: Copy TLS certificates
 #   copy:
