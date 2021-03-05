@@ -1,5 +1,6 @@
 galaxy_info:
-  author: your name
+  role_name: minio
+  author: dzintars
   description: your role description
   company: your company (optional)
 
