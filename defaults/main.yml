@@ -6,3 +6,6 @@ minio_group: minio
 
 # Minio server listen port
 minio_server_port: "9000"
+
+minio_volume_1: "/tmp"
+minio_fqdn: "s3.example.local"
